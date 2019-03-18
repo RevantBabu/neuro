@@ -110,40 +110,40 @@ st1 = np.cumsum(isi1)
 st2 = np.cumsum(isi2)
 
 #random spike trains
-plotVRD("Random spike-trains.(N:20) ", st1, st2)
+#plotVRD("Random spike-trains.(N:20) ", st1, st2)
 
 #Same spike trains
-st2 = st1
+#st2 = st1
 #plotVRD("Same spike-trains.", st1, st2)
 
 #Offset by +1
-st2 = st1 + 1
+#st2 = st1 + 1
 #plotVRD("spike-trains offset by +1.(N:20)", st1, st2)
 
 #Offset by +2
-st2 = st1 + 2
+#st2 = st1 + 2
 #plotVRD("spike-trains offset by +2.(N:20)", st1, st2)
 
 #Offset by +4
-st2 = st1 + 4
+#st2 = st1 + 4
 #plotVRD("spike-trains offset by +4.(N:20)", st1, st2)
 
 #Offset by +4
-st2 = st1 - 4
+#st2 = st1 - 4
 #plotVRD("spike-trains offset by -4.(N:20)", st1, st2)
 
-y = np.zeros(91)
-for i in range(0,91):
-  st2 = st1 + i
-  y[i] = vanRossumDistance(st1, st2, 15)
+# y = np.zeros(91)
+# for i in range(0,91):
+#   st2 = st1 + i
+#   y[i] = vanRossumDistance(st1, st2, 15)
 
-y = np.zeros(100)
-for i in range(0,100):
-  isi1 = np.random.poisson(15, 20)
-  isi2 = np.random.poisson(15, 20)
-  st1 = np.cumsum(isi1)
-  st2 = np.cumsum(isi2)
-  y[i] = vanRossumDistance(st1, st2, 15)
+# y = np.zeros(100)
+# for i in range(0,100):
+#   isi1 = np.random.poisson(15, 20)
+#   isi2 = np.random.poisson(15, 20)
+#   st1 = np.cumsum(isi1)
+#   st2 = np.cumsum(isi2)
+#   y[i] = vanRossumDistance(st1, st2, 15)
 
 
 # plt.plot(y, 'ko-', markersize=4)
@@ -151,3 +151,4 @@ for i in range(0,100):
 # plt.xlabel('sample no.')
 # plt.ylabel('VR distance')
 # plt.savefig("result.png")
+
