@@ -88,8 +88,8 @@ def generateLaplacianMatrix(tM):
 np.random.seed(42)
 
 TAU = 15
-#samples = generateNSamples(5, TAU, 100)
-samples = generateNSamples(50, TAU, 1000)
+samples = generateNSamples(5, TAU, 100)
+#samples = generateNSamples(200, TAU, 1000)
 distanceMatrix = generateDistanceMatrix(samples, TAU)
 print("distanceMatrix:")
 print(distanceMatrix, "\n")
@@ -98,8 +98,8 @@ similarityMatrix = generateSimilarityMatrix(distanceMatrix)
 print("similarityMatrix:")
 print(similarityMatrix, "\n")
 
-#thresholdMatrix = thresholdMatrix(similarityMatrix, 2)
-thresholdMatrix = thresholdMatrix(similarityMatrix, 5)
+thresholdMatrix = thresholdMatrix(similarityMatrix, 2)
+#thresholdMatrix = thresholdMatrix(similarityMatrix, 5)
 print("thresholdMatrix:")
 print(thresholdMatrix, "\n")
 
@@ -109,8 +109,15 @@ print("laplacianMatrix:")
 print(laplacianMatrix, "\n")
 
 w, v = np.linalg.eig(laplacianMatrix)
+idx = w.argsort()[::-1]
+
+wSorted = w[idx]
+vSorted = v[idx]
 print("eigenValues")
-print(w, "\n")
+print(wSorted , "\n")
 
 print("eigenVectors")
-print(v, "\n")
+print(vSorted, "\n")
+
+np.savetxt('eigenValues.txt', wSorted)
+np.savetxt('eigenVectors.txt', vSorted)
