@@ -33,7 +33,9 @@ __1s_15ms__
 
  
  Final distance matrix d for both neurons combined is arrived by: 
+ 
     d_ij = sqrt( d1_ij^2 + d2_ij^2 )
+    
  where d1 is distance matrix for neuron1 and d2 is for neuron2
  
  ### Laplacian and Eigen values
@@ -62,6 +64,7 @@ __1s_15ms__
 ```
 
 **Leading EigenVector**
+
 **1s_inf**
 
 ![1s_inf](https://github.com/RevantBabu/neuro/blob/master/results/1s_inf/leadingVector.png?raw=true)
@@ -74,6 +77,7 @@ __1s_15ms__
 ![1s_15ms_n1n2](https://github.com/RevantBabu/neuro/blob/master/results/1s_15ms/n1n2/leadingVector.png?raw=true)
 
 **Distance Distributions**
+
 **1s_15ms n1**
 ![n1](https://github.com/RevantBabu/neuro/blob/master/results/distances/distance_distribution_n1.png?raw=true)
 
