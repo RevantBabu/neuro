@@ -1,5 +1,5 @@
 # Dimensionality Reduction on Neuronal Data
----
+
 ## Data
 
 Currently using data from [hc-13](https://crcns.org/data-sets/hc/hc-13/about-hc-13)
@@ -33,8 +33,7 @@ __1s_15ms__
 
  
  Final distance matrix d for both neurons combined is arrived by: 
- - ![equation](http://www.sciweavers.org/tex2img.php?eq=d_%7Bij%7D%20%3D%20%20%5Csurd%20d1_%7Bij%7D%5E%7B2%7D%20%2B%20%20d2_%7Bij%7D%5E%7B2%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
-
+    d_ij = sqrt( d1_ij^2 + d2_ij^2 )
  where d1 is distance matrix for neuron1 and d2 is for neuron2
  
  ### Laplacian and Eigen values

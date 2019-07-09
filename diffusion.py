@@ -49,7 +49,9 @@ def generateLaplacianMatrix(tM):
   return result
 
 
-dM = np.load("distance_matrix1_1s_15ms.npy")
+d1 = np.load("distance_matrix1_1s_15ms.npy")
+d2 = np.load("distance_matrix2_1s_15ms.npy")
+dM = np.sqrt(d1**2 + d2**2)
 sM = generateSimilarityMatrix(dM)
 tM = thresholdMatrix(sM, 10)
 lM = generateLaplacianMatrix(tM)
