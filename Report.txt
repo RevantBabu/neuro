@@ -1,0 +1,16 @@
+Abstract
+
+Introduction
+- what you'll do
+
+Literature Review
+- Neuron
+- dR
+- 
+Describe what to come
+
+Methods
+- implementation
+
+Results
+
